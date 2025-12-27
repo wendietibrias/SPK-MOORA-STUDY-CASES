@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.header-container {
+  width: 100%;
+  background-color: #0984e3;
+  color: #fff;
+  padding: 1rem;
+}
+
+.header-container h2 {
+  font-size: 1.2rem;
+}
+
+.criteria-container {
+  padding: 1rem;
+}
+
+.criteria-form {
+  width: 50%;
+  margin-top: 1rem;
+}
+
+.criteria-form-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.criteria-form-item label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.criteria-form-item input {
+  width: 100%;
+  border: solid 1px #101010;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.criteria-form-btn,
+.calculation-btn {
+  display: block;
+  width: 100%;
+  background-color: #0984e3;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.criteria-item-container {
+  margin-top: 1rem;
+}
+
+table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+table tr th {
+  font-size: 0.8rem;
+  text-align:center;
+  border: solid 1px #101010;
+}
+
+table tr td {
+  font-size: 0.8rem;
+  border: solid 1px #101010;
+  text-align:center;
+}
+
+@media screen and (max-width: 600px) {
+  .criteria-container {
+    width: 100%;
+  }
+
+  .criteria-form {
+    width: 100%;
+  }
+}
