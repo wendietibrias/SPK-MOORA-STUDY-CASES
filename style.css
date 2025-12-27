@@ -51,8 +51,23 @@ body {
   outline: none;
 }
 
+.criteria-form-item input[type="number"] {
+  width: 70px;
+  text-align:center;
+  border: solid 1px #101010;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.criteria-form-item div {
+  display:flex;
+  align-items:center;
+  column-gap:0.5rem;
+}
+
 .criteria-form-btn,
-.calculation-btn {
+.calculation-btn,
+.reset-result-btn{
   display: block;
   width: 100%;
   background-color: #0984e3;
@@ -77,15 +92,25 @@ table {
 
 table tr th {
   font-size: 0.8rem;
-  text-align:center;
+  text-align: center;
   border: solid 1px #101010;
 }
 
 table tr td {
   font-size: 0.8rem;
   border: solid 1px #101010;
-  text-align:center;
+  text-align: center;
 }
+
+.result-container {
+  margin-top:1.5rem;
+}
+
+.reset-result-btn {
+  background-color: #e74c3c;
+  color:#fff;
+}
+
 
 @media screen and (max-width: 600px) {
   .criteria-container {

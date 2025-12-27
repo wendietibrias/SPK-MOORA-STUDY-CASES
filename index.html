@@ -1,83 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-      <div id="app">
-      <header class="header-container">
-        <h2>Pemilihan Laptop Terbaik</h2>
-      </header>
-      <div class="criteria-container">
-        <h4>Masukan Pilihan Laptop Anda</h4>
-        <form class="criteria-form">
-          <div class="criteria-form-item">
-            <label>Nama Laptop (Alternatif)</label>
-            <input
-              class="laptopName"
-              placeholder="Nama Laptop"
-              name="laptopName"
-            />
-          </div>
-          <div class="criteria-form-item">
-            <label>RAM (BENEFIT)</label>
-            <input class="ram" placeholder="Ram Laptop" name="laptopName" />
-          </div>
-          <div class="criteria-form-item">
-            <label>HARGA (COST)</label>
-            <input class="price" placeholder="Harga Laptop" name="laptopName" />
-          </div>
-          <div class="criteria-form-item">
-            <label>BERAT (COST)</label>
-            <input
-              class="weight"
-              placeholder="Berat Laptop"
-              name="laptopName"
-            />
-          </div>
-          <div class="criteria-form-item">
-            <label>KECEPATAN PROCESSOR (BENEFIT)</label>
-            <input
-              class="processorSpeed"
-              placeholder="Kecepatan Processor Laptop"
-              name="laptopName"
-            />
-          </div>
-          <div class="criteria-form-item">
-            <label>DAYA TAHAN BATERAI (COST)</label>
-            <input
-              class="battery"
-              placeholder="Daya Tahan Baterai"
-              name="laptopName"
-            />
-          </div>
-          <button type="button" class="criteria-form-btn">
-            Submit Kriteria
-          </button>
-        </form>
 
-        <div class="criteria-item-container">
-          <h4>Kriteria Yang Anda Masukan</h4>
-          <table>
-            <thead>
-              <tr>
-                <th>Alternatif</th>
-                <th>RAM (benefit)</th>
-                <th>HARGA (cost)</th>
-                <th>PROCESSOR (benefit)</th>
-                <th>BERAT (cost)</th>
-                <th>BATERAI (benefit)</th>
-              </tr>
-            </thead>
-            <tbody id="criteria-item-body"></tbody>
-          </table>
-          <button class="calculation-btn">Kalkulasi Hasil</button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div id="app">
+    <header class="header-container">
+      <h2>Pemilihan Laptop Terbaik</h2>
+    </header>
+    <div class="criteria-container">
+      <h4>Masukan Pilihan Laptop Anda</h4>
+      <form class="criteria-form">
+        <div class="criteria-form-item">
+          <label>Nama Laptop (Alternatif)</label>
+          <input class="laptopName" placeholder="Nama Laptop" name="laptopName" />
         </div>
+        <div class="criteria-form-item">
+          <label>RAM (BENEFIT)</label>
+          <div>
+            <input class="ram" data-tipe="benefit" placeholder="Ram Laptop" name="laptopName" />
+            <input type="number" placeholder="Bobot" class="ramWeight">
+          </div>
+        </div>
+        <div class="criteria-form-item">
+          <label>HARGA (COST)</label>
+          <div>
+            <input data-tipe="cost" class="price" placeholder="Harga Laptop" name="laptopName" />
+            <input type="number" placeholder="Bobot" class="priceWeight">
+          </div>
+        </div>
+        <div class="criteria-form-item">
+          <label>BERAT (COST)</label>
+          <div>
+            <input class="weight" data-tipe="cost" placeholder="Berat Laptop" name="laptopName" />
+            <input type="number" placeholder="Bobot" class="laptopWeight">
+          </div>
+        </div>
+        <div class="criteria-form-item">
+          <label>KECEPATAN PROCESSOR (BENEFIT)</label>
+          <div>
+            <input class="processorSpeed" data-tipe="benefit" placeholder="Kecepatan Processor Laptop"
+              name="laptopName" />
+            <input type="number" placeholder="Bobot" class="processorSpeedWeight">
+          </div>
+
+        </div>
+        <div class="criteria-form-item">
+          <label>DAYA TAHAN BATERAI (COST)</label>
+          <div>
+            <input data-tipe="cost" class="battery" placeholder="Daya Tahan Baterai" name="laptopName" />
+            <input type="number" placeholder="Bobot" class="batteryWeight">
+          </div>
+
+        </div>
+        <button type="button" class="criteria-form-btn">
+          Submit Kriteria
+        </button>
+      </form>
+
+      <div class="criteria-item-container">
+        <h4>Kriteria Yang Anda Masukan</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Alternatif</th>
+              <th>RAM (benefit)</th>
+              <th>HARGA (cost)</th>
+              <th>PROCESSOR (benefit)</th>
+              <th>BERAT (cost)</th>
+              <th>BATERAI (benefit)</th>
+            </tr>
+          </thead>
+          <tbody id="criteria-item-body"></tbody>
+        </table>
+        <button class="calculation-btn">Kalkulasi Hasil</button>
       </div>
+    <div class="result-container">
+        <h4>Hasil Kalkulasi</h4>
+      <table class="table-result">
+        <thead>
+          <th>Nama Laptop</th>
+          <th>Score</th>
+          <th>Peringkat</th>
+        </thead>
+        <tbody id="table-result-container"></tbody>
+      </table>
     </div>
-    <script src="./script.js" ></script>
+
+    <button class="reset-result-btn">Reset Kalkulasi</button>
+    </div>
+    
+
+  </div>
+  <script src="./script.js"></script>
 </body>
+
 </html>
