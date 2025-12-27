@@ -73,7 +73,7 @@ calculationBtn.addEventListener("click", function () {
         squareOfItems[key].calculatedResult = squareOfItems[key].values.map((detailMapped) => {
           const currentCalculated = Math.sqrt(detailMapped**2);
           calculatedResult += Math.sqrt(detailMapped**2);
-        })
+        });
 
         squareOfItems[key].calculatedResult = Math.sqrt(calculatedResult);
         squareOfItems[key].normalizations = squareOfItems[key].values.map((item) => {
